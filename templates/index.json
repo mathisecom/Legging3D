@@ -130,42 +130,12 @@
             "title": "EFFET PUSH-UP SCULPTANT",
             "description": "Une structure gainante qui affine les jambes, accompagnée d'un léger plissé, qui réhausse et galbe naturellement les fesses, pour une silhouette instantanément plus harmonieuse et plus sexy."
           }
-        },
-        "annotation_WViJmw": {
-          "type": "annotation",
-          "settings": {
-            "title": "Réduit la cellulite",
-            "description": "Grâce à des lignes 3D qui stimulent les cellules graisseuses.",
-            "dot_x": 62,
-            "dot_y": 28
-          }
-        },
-        "annotation_fArRtE": {
-          "type": "annotation",
-          "settings": {
-            "title": "Opaque & Push-up",
-            "description": "Couvre l'aspect de la cellulite et galbe le fessier.",
-            "dot_x": 42,
-            "dot_y": 48
-          }
-        },
-        "annotation_L7ByEi": {
-          "type": "annotation",
-          "settings": {
-            "title": "Tonifie les jambes & les fesses",
-            "description": "Compression douce qui stimule les muscles.",
-            "dot_x": 52,
-            "dot_y": 75
-          }
         }
       },
       "block_order": [
         "step_qrNLMK",
         "step_RzP3zX",
-        "step_reDPGH",
-        "annotation_WViJmw",
-        "annotation_fArRtE",
-        "annotation_L7ByEi"
+        "step_reDPGH"
       ],
       "name": "Comment ça marche",
       "settings": {
@@ -176,6 +146,9 @@
         "padding_top": 0,
         "padding_bottom": 65,
         "bg_color": "#ffffff",
+        "image": "shopify://shop_images/IMG_2.webp",
+        "image_fit": "natural",
+        "image_border_radius": 14,
         "eyebrow_text": "COMMENT CA MARCHE ?",
         "eyebrow_color": "#6b1f3a",
         "heading": "Une conception innovante",
@@ -189,21 +162,7 @@
         "tagline_text": "Leonie & Co : le legging qui sublime vos courbes et booste votre confiance.",
         "show_tagline_line": true,
         "tagline_color": "#6b1f3a",
-        "tagline_line_color": "#6b1f3a",
-        "image": "shopify://shop_images/IMG_2.webp",
-        "card_bg_color": "#fcf8f5",
-        "card_border_radius": 24,
-        "anno_heading_1": "Sens-toi",
-        "annotation_heading_color1": "#1a1a2e",
-        "anno_heading_2": "Sexy et Confiante",
-        "annotation_heading_color2": "#6b1f3a",
-        "annotation_heading_size": 34,
-        "show_divider": true,
-        "divider_color": "#d4a99e",
-        "annotation_title_color": "#6b1f3a",
-        "annotation_text_color": "#444444",
-        "show_dots": true,
-        "dot_color": "#c2476a"
+        "tagline_line_color": "#6b1f3a"
       }
     },
     "faq": {
