@@ -62,9 +62,9 @@
         "card_width_desktop": 130,
         "card_width_mobile": 100,
         "heading_color": "#121212",
-        "layout_bg_color": "#FFFFFF",
+        "layout_bg_color": "#ffffff",
         "layout_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "border_color": "#121212",
         "margin_top": 0,
         "margin_bottom": 0,
@@ -107,6 +107,105 @@
         "product_card_text_color": ""
       }
     },
+    "sectionbenefices_PxxGyq": {
+      "type": "sectionbenefices",
+      "blocks": {
+        "step_qrNLMK": {
+          "type": "step",
+          "settings": {
+            "title": "TECHNOLOGIE 3D DRAINANTE",
+            "description": "Les lignes 3D, positionnées sur les cuisses et les fessiers, créent un léger massage qui stimule naturellement la circulation sanguine et aide à activer le drainage de la cellulite."
+          }
+        },
+        "step_RzP3zX": {
+          "type": "step",
+          "settings": {
+            "title": "UNE COMPRESSION DOUCE",
+            "description": "La matière épouse parfaitement le corps et exerce une légère pression sur les jambes. Cette compression douce stimule la tonicité et apporte une sensation de maintien agréable tout au long de la journée."
+          }
+        },
+        "step_reDPGH": {
+          "type": "step",
+          "settings": {
+            "title": "EFFET PUSH-UP SCULPTANT",
+            "description": "Une structure gainante qui affine les jambes, accompagnée d'un léger plissé, qui réhausse et galbe naturellement les fesses, pour une silhouette instantanément plus harmonieuse et plus sexy."
+          }
+        },
+        "annotation_WViJmw": {
+          "type": "annotation",
+          "settings": {
+            "title": "Réduit la cellulite",
+            "description": "Grâce à des lignes 3D qui stimulent les cellules graisseuses.",
+            "dot_x": 62,
+            "dot_y": 28
+          }
+        },
+        "annotation_fArRtE": {
+          "type": "annotation",
+          "settings": {
+            "title": "Opaque & Push-up",
+            "description": "Couvre l'aspect de la cellulite et galbe le fessier.",
+            "dot_x": 42,
+            "dot_y": 48
+          }
+        },
+        "annotation_L7ByEi": {
+          "type": "annotation",
+          "settings": {
+            "title": "Tonifie les jambes & les fesses",
+            "description": "Compression douce qui stimule les muscles.",
+            "dot_x": 52,
+            "dot_y": 75
+          }
+        }
+      },
+      "block_order": [
+        "step_qrNLMK",
+        "step_RzP3zX",
+        "step_reDPGH",
+        "annotation_WViJmw",
+        "annotation_fArRtE",
+        "annotation_L7ByEi"
+      ],
+      "name": "Comment ça marche",
+      "settings": {
+        "full_width": false,
+        "image_position": "right",
+        "container_width": 1420,
+        "column_gap": 80,
+        "padding_top": 0,
+        "padding_bottom": 65,
+        "bg_color": "#ffffff",
+        "eyebrow_text": "COMMENT CA MARCHE ?",
+        "eyebrow_color": "#6b1f3a",
+        "heading": "Une conception innovante",
+        "heading_size": 38,
+        "heading_color": "#1a1a2e",
+        "description": "<p>Nous avons conçu le legging anti-cellulite le plus abouti. Il allie stimulation de la circulation, drainage doux, compression légère et effet push-up, pour une peau visiblement plus lisse, et une silhouette mise en valeur.</p>",
+        "text_color": "#333333",
+        "step_bg_color": "#fcf8f5",
+        "step_number_color": "#6b1f3a",
+        "step_title_color": "#6b1f3a",
+        "tagline_text": "Leonie & Co : le legging qui sublime vos courbes et booste votre confiance.",
+        "show_tagline_line": true,
+        "tagline_color": "#6b1f3a",
+        "tagline_line_color": "#6b1f3a",
+        "image": "shopify://shop_images/IMG_2.webp",
+        "card_bg_color": "#fcf8f5",
+        "card_border_radius": 24,
+        "anno_heading_1": "Sens-toi",
+        "annotation_heading_color1": "#1a1a2e",
+        "anno_heading_2": "Sexy et Confiante",
+        "annotation_heading_color2": "#6b1f3a",
+        "annotation_heading_size": 34,
+        "show_divider": true,
+        "divider_color": "#d4a99e",
+        "annotation_title_color": "#6b1f3a",
+        "annotation_text_color": "#444444",
+        "show_dots": true,
+        "dot_color": "#c2476a"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -137,18 +236,17 @@
         "166442457738b23caf-1",
         "166442457738b23caf-2"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "subheading": "",
-        "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "title": "Questions Fréquentes",
+        "content": "",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
+        "support_hours": "",
+        "answer_time": "",
         "button_text": "",
         "button_url": "",
-        "text_position": "start",
+        "text_position": "center",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
@@ -164,6 +262,7 @@
   "order": [
     "logoscroll_TMHbfX",
     "featured_collection_AKVKUy",
+    "sectionbenefices_PxxGyq",
     "faq"
   ]
 }
