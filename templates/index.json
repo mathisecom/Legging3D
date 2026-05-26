@@ -116,6 +116,12 @@
             "show_taxes_notice": false
           }
         },
+        "liquid_YLHCVf": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "description_L6aJT3": {
           "type": "description",
           "disabled": true,
@@ -216,6 +222,7 @@
         "text_pzzbKP",
         "badges_VzW9P7",
         "price_hDYMzE",
+        "liquid_YLHCVf",
         "description_L6aJT3",
         "variant_picker_4PAbpV",
         "quantity_selector_BaMNBD",
