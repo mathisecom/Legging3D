@@ -297,6 +297,124 @@
         "input_text_color": ""
       }
     },
+    "rich_text_zrpnFV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4biRHY": {
+          "type": "heading",
+          "settings": {
+            "text": "+3,000 CLIENTS SATISFAITS",
+            "heading_tag": "h3",
+            "text_color": "#772647",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_4biRHY"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "logoscroll_hRYpa3": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_iH9D6B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152647.299.webp",
+            "url": ""
+          }
+        },
+        "image_p9CG4k": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152633.609.webp",
+            "url": ""
+          }
+        },
+        "image_E8tnK9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152614.049.webp",
+            "url": ""
+          }
+        },
+        "image_zjHX4D": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152627.196.webp",
+            "url": ""
+          }
+        },
+        "image_VXrGMi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152701.354.webp",
+            "url": ""
+          }
+        },
+        "image_MQ6Cjf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152652.736.webp",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_iH9D6B",
+        "image_p9CG4k",
+        "image_E8tnK9",
+        "image_zjHX4D",
+        "image_VXrGMi",
+        "image_MQ6Cjf"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 30,
+        "scrolling_velocity_mobile": 24,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 70,
+        "scrolling_gap_mobile": 30,
+        "card_width_desktop": 140,
+        "card_width_mobile": 120,
+        "heading_color": "#772647",
+        "layout_bg_color": "#ffffff",
+        "layout_border_color": "#121212",
+        "background_color": "#ffffff",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "featured_collection_AKVKUy": {
       "type": "featured-collection",
       "disabled": true,
@@ -469,6 +587,7 @@
         "image_zExznE": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/mama_c7bdf3cd-f3a2-4f2d-a767-599bb2d5a12b_1.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -866,6 +985,8 @@
     "splitbanner_fbcfpX",
     "logoscroll_TMHbfX",
     "featured_product_JiXBgg",
+    "rich_text_zrpnFV",
+    "logoscroll_hRYpa3",
     "featured_collection_AKVKUy",
     "sectionbenefices_PxxGyq",
     "text_with_icons_HRQy7f",
