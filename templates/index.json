@@ -172,8 +172,28 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Livraisons & Retours",
+            "title": "Matériaux et Instructions D'Entretien",
             "content": "<p><strong>Livraison : GRATUITE</strong></p><p><strong>Délais : </strong>France et Europe : expédition en 48h, livraison 5 à 7 jours ouvrable</p><p><strong>Retours et échanges : </strong>Retours GRATUITS sous 14 jours Remboursement ou échange selon votre choix</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_Pa9rm9": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Livraisons & Retours",
+            "content": "<p><strong>Composition</strong>: 90 % polyamide, 10 % élasthanne<br/><br/>– Laver à une température inférieure à 40 °C<br/>- Ne pas javelliser<br/>- Ne pas repasser<br/>- Ne pas nettoyer à sec</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_NpJ9rb": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Première Technologie 3D Brevetée",
+            "content": "<p>Nous avons développé une technologie exclusive de <strong>compression 3D</strong> qui sculpte votre silhouette, lisse votre <strong>peau et soutient les processus naturels</strong> de votre corps, sans effort. Protégée par un brevet exclusif, cette innovation est <strong>uniquement disponible via Crinéa.</strong></p>",
             "page": ""
           }
         }
@@ -190,7 +210,9 @@
         "liquid_DtxjzL",
         "buy_buttons_md7N9F",
         "collapsible_text_QJTUdx",
-        "collapsible_text_KGzE3M"
+        "collapsible_text_KGzE3M",
+        "collapsible_text_Pa9rm9",
+        "collapsible_text_NpJ9rb"
       ],
       "name": "Featured product",
       "settings": {
