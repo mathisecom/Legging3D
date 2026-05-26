@@ -730,13 +730,21 @@
             "title": "Les leggings Legz sont-ils opaques ?",
             "content": "<p><strong>OUI ! </strong>Nous garantissons que les leggings <br/><br/>Legz<br/><br/> restent complètement opaques même lors de <strong>mouvements intenses ou d'étirements.</strong></p>"
           }
+        },
+        "item_WdKzAy": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit si je ne suis pas satisfait ?",
+            "content": "<p>Oui, vous disposez de 30 jours pour nous retourner l'article. Nous proposons des échanges ou un remboursement rapide si le produit ne convient pas.<br/><br/></p>"
+          }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
         "166442457738b23caf-2",
-        "item_JWewtq"
+        "item_JWewtq",
+        "item_WdKzAy"
       ],
       "settings": {
         "full_width": false,
