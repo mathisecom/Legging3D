@@ -625,9 +625,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "John S.",
-            "title": "Testimonial 1",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "author": "Julia S.",
+            "title": "Je recommande",
+            "content": "<p>J’en ai commandé un, puis un deuxième. C’est le seul produit où j’ai vu une amélioration visible sur ma peau sans effort. Et le tissu est top.</p>"
           }
         },
         "testimonial_BJT6a6": {
@@ -637,8 +637,8 @@
             "show_rating": true,
             "rating": 5,
             "author": "Mary U.",
-            "title": "Testimonial 2",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "title": "Il fait vraiment une différence",
+            "content": "<p>Ce legging est devenu un indispensable. En à peine une semaine, j’ai remarqué que ma silhouette s’était affinée. Il fait vraiment une différence.</p>"
           }
         },
         "testimonial_PgjUHD": {
@@ -648,15 +648,39 @@
             "show_rating": true,
             "rating": 4,
             "author": "Joshua A.",
-            "title": "Testimonial 3",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "title": "Ce legging est devenu un indispensable",
+            "content": "<p>Ce legging est devenu un indispensable. En à peine une semaine, j’ai remarqué que ma silhouette s’était affinée. Il fait vraiment une différence.</p>"
+          }
+        },
+        "testimonial_bqjWcc": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Lorianne S.",
+            "title": "Je recommande à toutes mes amies.",
+            "content": "<p>Je recommande à toutes mes amies. C’est rare de tomber sur un produit qui tient ses promesses. Et la sensation de maintien est juste parfaite.</p>"
+          }
+        },
+        "testimonial_R3EtRH": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Laura C.",
+            "title": "Je me sens mieux dans mes vêtements.",
+            "content": "<p>J’étais vraiment complexée par ma cellulite. J’ai porté ce legging tous les jours pendant 10 jours… et j’ai vu une vraie différence. Ma peau est plus lisse et je me sens mieux dans mes vêtements.</p>"
           }
         }
       },
       "block_order": [
         "testimonial_brAEV9",
         "testimonial_BJT6a6",
-        "testimonial_PgjUHD"
+        "testimonial_PgjUHD",
+        "testimonial_bqjWcc",
+        "testimonial_R3EtRH"
       ],
       "name": "Testimonials",
       "settings": {
