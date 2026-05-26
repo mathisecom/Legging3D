@@ -134,6 +134,12 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "liquid_zV7wPn": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "buy_buttons_md7N9F": {
           "type": "buy_buttons",
           "settings": {
@@ -154,6 +160,7 @@
         "description_L6aJT3",
         "variant_picker_4PAbpV",
         "quantity_selector_BaMNBD",
+        "liquid_zV7wPn",
         "buy_buttons_md7N9F"
       ],
       "name": "Featured product",
