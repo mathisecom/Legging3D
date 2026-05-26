@@ -78,6 +78,7 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
+            "image": "shopify://shop_images/POP_25.png",
             "image_width": 150,
             "heading_size": "h4",
             "title": "Newsletter",
