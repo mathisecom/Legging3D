@@ -14,7 +14,7 @@
       "name": "Bannière image + texte",
       "settings": {
         "full_width": true,
-        "image_position": "left",
+        "image_position": "right",
         "container_width": 1300,
         "border_radius": 0,
         "padding_top": 0,
