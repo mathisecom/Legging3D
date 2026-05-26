@@ -171,6 +171,85 @@
         "tagline_line_color": "#6b1f3a"
       }
     },
+    "text_with_icons_HRQy7f": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_m6b6cR": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-05-11T165104.368.webp",
+            "mobile_icon_width": 36,
+            "icon_width": 44,
+            "icon_background_type": "circle",
+            "icon_background": "#fcf8f5",
+            "icon_color": "",
+            "title": "Reliefs Sculptants 3D",
+            "content": "<p>Compression ciblée sur cuisses et fessiers. Effet massant à chaque mouvement.</p>"
+          }
+        },
+        "item_QKfV9f": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-05-11T164844.605.webp",
+            "mobile_icon_width": 36,
+            "icon_width": 44,
+            "icon_background_type": "circle",
+            "icon_background": "#fcf8f5",
+            "icon_color": "",
+            "title": "Effet Push-Up Immédiat",
+            "content": "<p>Fessiers galbés et rehaussés dès le premier enfilage.</p>"
+          }
+        },
+        "item_j3pp8Q": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-05-11T164907.534.webp",
+            "mobile_icon_width": 36,
+            "icon_width": 44,
+            "icon_background_type": "circle",
+            "icon_background": "#fcf8f5",
+            "icon_color": "",
+            "title": "Tissu Premium",
+            "content": "<p>70% polyamide, 30% élasthanne. Opaque, respirant, compression confortable.</p>"
+          }
+        },
+        "item_rRQJbb": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/CREA_1080X1080_-_2026-05-11T165207.366.webp",
+            "mobile_icon_width": 36,
+            "icon_width": 44,
+            "icon_background_type": "circle",
+            "icon_background": "#fcf8f5",
+            "icon_color": "",
+            "title": "Ceinture Anti-Glissement",
+            "content": "<p>Elle ne roule pas, ne marque pas. Parfaitement en place toute la journée.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_m6b6cR",
+        "item_QKfV9f",
+        "item_j3pp8Q",
+        "item_rRQJbb"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h5",
+        "text_alignment": "center",
+        "icon_spacing": "medium",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "scrolling_text_CB6qcV": {
       "type": "scrolling-text",
       "name": "Scrolling text",
@@ -491,6 +570,7 @@
     "logoscroll_TMHbfX",
     "featured_collection_AKVKUy",
     "sectionbenefices_PxxGyq",
+    "text_with_icons_HRQy7f",
     "scrolling_text_CB6qcV",
     "multi_column_aeNg9Y",
     "rich_text_bMUAme",
