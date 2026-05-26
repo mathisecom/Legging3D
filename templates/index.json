@@ -206,24 +206,42 @@
         "image_UPQTW6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152647.299.webp",
             "url": ""
           }
         },
         "image_LRhEPy": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152633.609.webp",
             "url": ""
           }
         },
         "image_V6eDqA": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152614.049.webp",
             "url": ""
           }
         },
         "image_gqadBP": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152627.196.webp",
+            "url": ""
+          }
+        },
+        "image_dEJJwL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152701.354.webp",
+            "url": ""
+          }
+        },
+        "image_JKxCxj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_-_2026-05-11T152652.736.webp",
             "url": ""
           }
         }
@@ -232,7 +250,9 @@
         "image_UPQTW6",
         "image_LRhEPy",
         "image_V6eDqA",
-        "image_gqadBP"
+        "image_gqadBP",
+        "image_dEJJwL",
+        "image_JKxCxj"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
@@ -245,13 +265,13 @@
         "heading_size_mobile": 18,
         "heading_height": 130,
         "scrolling_velocity": 30,
-        "scrolling_velocity_mobile": 30,
+        "scrolling_velocity_mobile": 24,
         "scrolling_direction": "left",
         "pause_hover": false,
         "scrolling_gap": 70,
         "scrolling_gap_mobile": 30,
-        "card_width_desktop": 130,
-        "card_width_mobile": 100,
+        "card_width_desktop": 140,
+        "card_width_mobile": 120,
         "heading_color": "#121212",
         "layout_bg_color": "#ffffff",
         "layout_border_color": "#121212",
@@ -328,7 +348,7 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "testimonial_card_background": "",
+        "testimonial_card_background": "#fcf8f5",
         "testimonial_card_text_color": ""
       }
     },
