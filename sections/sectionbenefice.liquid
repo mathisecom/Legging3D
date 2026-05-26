@@ -1,0 +1,371 @@
+{%- liquid
+  assign s = section.settings
+  assign uid = section.id
+-%}
+
+{%- style -%}
+  .hiw-{{ uid }} {
+    --hiw-pad-top: {{ s.padding_top }}px;
+    --hiw-pad-bot: {{ s.padding_bottom }}px;
+    --hiw-max: {{ s.container_width }}px;
+    --hiw-gap: {{ s.column_gap }}px;
+    --hiw-bg: {{ s.bg_color }};
+
+    --hiw-eyebrow-color: {{ s.eyebrow_color }};
+    --hiw-heading-color: {{ s.heading_color }};
+    --hiw-text-color: {{ s.text_color }};
+
+    --hiw-step-bg: {{ s.step_bg_color }};
+    --hiw-step-num: {{ s.step_number_color }};
+    --hiw-step-title: {{ s.step_title_color }};
+
+    --hiw-tagline-color: {{ s.tagline_color }};
+    --hiw-tagline-line: {{ s.tagline_line_color }};
+
+    --hiw-heading-size: {{ s.heading_size }}px;
+    --hiw-image-radius: {{ s.image_border_radius }}px;
+
+    background: var(--hiw-bg);
+    padding: var(--hiw-pad-top) {% if s.full_width %}0{% else %}20px{% endif %} var(--hiw-pad-bot);
+    font-family: inherit;
+  }
+
+  .hiw-{{ uid }} *,
+  .hiw-{{ uid }} *::before,
+  .hiw-{{ uid }} *::after { box-sizing: border-box; }
+
+  .hiw-{{ uid }}__wrapper {
+    max-width: {% if s.full_width %}100%{% else %}var(--hiw-max){% endif %};
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--hiw-gap);
+    align-items: center;
+  }
+  .hiw-{{ uid }}--reverse .hiw-{{ uid }}__wrapper { direction: rtl; }
+  .hiw-{{ uid }}--reverse .hiw-{{ uid }}__text,
+  .hiw-{{ uid }}--reverse .hiw-{{ uid }}__media { direction: ltr; }
+
+  /* ===== TEXT COLUMN ===== */
+  .hiw-{{ uid }}__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hiw-{{ uid }}__eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--hiw-eyebrow-color);
+    font-weight: 600;
+    font-style: italic;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .hiw-{{ uid }}__heading {
+    font-size: var(--hiw-heading-size);
+    line-height: 1.1;
+    color: var(--hiw-heading-color);
+    margin: 0;
+    font-weight: 400;
+    font-family: inherit;
+  }
+
+  .hiw-{{ uid }}__description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--hiw-text-color);
+    margin: 0;
+  }
+  .hiw-{{ uid }}__description p { margin: 0 0 0.8em; }
+  .hiw-{{ uid }}__description p:last-child { margin-bottom: 0; }
+
+  .hiw-{{ uid }}__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .hiw-{{ uid }}__step {
+    background: var(--hiw-step-bg);
+    padding: 18px 24px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .hiw-{{ uid }}__step-number {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--hiw-step-num);
+    line-height: 1;
+    font-family: inherit;
+  }
+
+  .hiw-{{ uid }}__step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 4px;
+  }
+
+  .hiw-{{ uid }}__step-title {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--hiw-step-title);
+    font-weight: 600;
+    margin: 0;
+    font-family: inherit;
+  }
+
+  .hiw-{{ uid }}__step-description {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--hiw-text-color);
+    margin: 0;
+  }
+
+  .hiw-{{ uid }}__tagline {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--hiw-tagline-color);
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .hiw-{{ uid }}__tagline-line {
+    width: 2px;
+    background: var(--hiw-tagline-line);
+    flex-shrink: 0;
+  }
+
+  /* ===== IMAGE COLUMN ===== */
+  .hiw-{{ uid }}__media {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--hiw-image-radius);
+  }
+  .hiw-{{ uid }}__media.is-cover {
+    align-self: stretch;
+    height: 100%;
+  }
+  .hiw-{{ uid }}__media img,
+  .hiw-{{ uid }}__media svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    {%- if s.image_fit == 'cover' -%}
+    object-fit: cover;
+    {%- else -%}
+    object-fit: contain;
+    height: auto;
+    {%- endif -%}
+  }
+
+  /* ===== TABLET ===== */
+  @media (min-width: 750px) and (max-width: 989px) {
+    .hiw-{{ uid }}__wrapper,
+    .hiw-{{ uid }}--reverse .hiw-{{ uid }}__wrapper {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 40px;
+    }
+    .hiw-{{ uid }}__heading { font-size: calc(var(--hiw-heading-size) * 0.85); }
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 749px) {
+    .hiw-{{ uid }} {
+      padding: calc(var(--hiw-pad-top) * 0.6) {% if s.full_width %}0{% else %}14px{% endif %} calc(var(--hiw-pad-bot) * 0.6);
+    }
+    .hiw-{{ uid }}__wrapper,
+    .hiw-{{ uid }}--reverse .hiw-{{ uid }}__wrapper {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 32px;
+    }
+    .hiw-{{ uid }}__heading {
+      font-size: calc(var(--hiw-heading-size) * 0.65);
+    }
+    .hiw-{{ uid }}__step {
+      padding: 14px 16px;
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+    }
+    .hiw-{{ uid }}__step-number { font-size: 34px; }
+    .hiw-{{ uid }}__media img { height: auto; }
+  }
+{%- endstyle -%}
+
+<div class="hiw-{{ uid }}{% if s.image_position == 'left' %} hiw-{{ uid }}--reverse{% endif %}">
+  <div class="hiw-{{ uid }}__wrapper">
+
+    {%- comment -%} ===== TEXT COLUMN ===== {%- endcomment -%}
+    <div class="hiw-{{ uid }}__text">
+
+      {%- if s.eyebrow_text != blank -%}
+        <p class="hiw-{{ uid }}__eyebrow">{{ s.eyebrow_text }}</p>
+      {%- endif -%}
+
+      {%- if s.heading != blank -%}
+        <h2 class="hiw-{{ uid }}__heading">{{ s.heading }}</h2>
+      {%- endif -%}
+
+      {%- if s.description != blank -%}
+        <div class="hiw-{{ uid }}__description">{{ s.description }}</div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="hiw-{{ uid }}__steps">
+          {%- assign step_idx = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'step' -%}
+              {%- assign step_idx = step_idx | plus: 1 -%}
+              <div class="hiw-{{ uid }}__step" {{ block.shopify_attributes }}>
+                <div class="hiw-{{ uid }}__step-number">{{ step_idx }}</div>
+                <div class="hiw-{{ uid }}__step-content">
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="hiw-{{ uid }}__step-title">{{ block.settings.title }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.description != blank -%}
+                    <p class="hiw-{{ uid }}__step-description">{{ block.settings.description }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if s.tagline_text != blank -%}
+        <div class="hiw-{{ uid }}__tagline">
+          {%- if s.show_tagline_line -%}
+            <span class="hiw-{{ uid }}__tagline-line" aria-hidden="true"></span>
+          {%- endif -%}
+          <span>{{ s.tagline_text }}</span>
+        </div>
+      {%- endif -%}
+
+    </div>
+
+    {%- comment -%} ===== IMAGE COLUMN ===== {%- endcomment -%}
+    <div class="hiw-{{ uid }}__media{% if s.image_fit == 'cover' %} is-cover{% endif %}">
+      {%- if s.image != blank -%}
+        {{ s.image | image_url: width: 1200 | image_tag:
+            loading: 'lazy',
+            widths: '375, 550, 750, 1100, 1500',
+            sizes: '(max-width: 749px) 100vw, 50vw',
+            alt: s.image.alt | default: s.heading
+        }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Comment ça marche",
+  "tag": "section",
+  "class": "section-how-it-works",
+  "settings": [
+    { "type": "header", "content": "Mise en page" },
+    { "type": "checkbox", "id": "full_width", "label": "Pleine largeur (bord à bord)", "default": false },
+    { "type": "select", "id": "image_position", "label": "Position de l'image",
+      "options": [
+        { "value": "left", "label": "Gauche" },
+        { "value": "right", "label": "Droite" }
+      ], "default": "right"
+    },
+    { "type": "range", "id": "container_width", "label": "Largeur maximale",
+      "min": 900, "max": 1800, "step": 20, "unit": "px", "default": 1400 },
+    { "type": "range", "id": "column_gap", "label": "Espace entre colonnes",
+      "min": 20, "max": 150, "step": 5, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_top", "label": "Espacement haut",
+      "min": 0, "max": 200, "step": 5, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Espacement bas",
+      "min": 0, "max": 200, "step": 5, "unit": "px", "default": 80 },
+    { "type": "color", "id": "bg_color", "label": "Couleur de fond de la section", "default": "#ffffff" },
+
+    { "type": "header", "content": "Image" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "select", "id": "image_fit", "label": "Comportement de l'image",
+      "info": "Remplir = l'image occupe toute la hauteur (cadrage possible). Naturel = l'image garde ses proportions.",
+      "options": [
+        { "value": "cover",   "label": "Remplir la colonne (cadrage)" },
+        { "value": "natural", "label": "Proportions naturelles" }
+      ], "default": "natural"
+    },
+    { "type": "range", "id": "image_border_radius", "label": "Arrondi de l'image",
+      "min": 0, "max": 60, "step": 2, "unit": "px", "default": 0 },
+
+    { "type": "header", "content": "En-tête texte" },
+    { "type": "text", "id": "eyebrow_text", "label": "Sur-titre", "default": "COMMENT CA MARCHE ?" },
+    { "type": "color", "id": "eyebrow_color", "label": "Couleur du sur-titre", "default": "#6b1f3a" },
+    { "type": "text", "id": "heading", "label": "Titre principal", "default": "Une conception innovante" },
+    { "type": "range", "id": "heading_size", "label": "Taille du titre",
+      "min": 24, "max": 64, "step": 1, "unit": "px", "default": 38 },
+    { "type": "color", "id": "heading_color", "label": "Couleur du titre", "default": "#1a1a2e" },
+    { "type": "richtext", "id": "description", "label": "Description",
+      "default": "<p>Nous avons conçu le legging anti-cellulite le plus abouti. Il allie stimulation de la circulation, drainage doux, compression légère et effet push-up, pour une peau visiblement plus lisse, et une silhouette mise en valeur.</p>" },
+    { "type": "color", "id": "text_color", "label": "Couleur du texte courant", "default": "#333333" },
+
+    { "type": "header", "content": "Style des cartes étape" },
+    { "type": "color", "id": "step_bg_color", "label": "Fond des cartes étape", "default": "#fce8e0" },
+    { "type": "color", "id": "step_number_color", "label": "Couleur des numéros", "default": "#6b1f3a" },
+    { "type": "color", "id": "step_title_color", "label": "Couleur des titres d'étape", "default": "#6b1f3a" },
+
+    { "type": "header", "content": "Phrase signature" },
+    { "type": "text", "id": "tagline_text", "label": "Texte signature",
+      "default": "Leonie & Co : le legging qui sublime vos courbes et booste votre confiance." },
+    { "type": "checkbox", "id": "show_tagline_line", "label": "Afficher le trait vertical à gauche", "default": true },
+    { "type": "color", "id": "tagline_color", "label": "Couleur du texte signature", "default": "#6b1f3a" },
+    { "type": "color", "id": "tagline_line_color", "label": "Couleur du trait", "default": "#6b1f3a" }
+  ],
+
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Étape",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre", "default": "TITRE DE L'ÉTAPE" },
+        { "type": "textarea", "id": "description", "label": "Description",
+          "default": "Description de cette étape avec quelques détails utiles pour le client." }
+      ]
+    }
+  ],
+
+  "max_blocks": 8,
+
+  "presets": [
+    {
+      "name": "Comment ça marche",
+      "category": "Texte",
+      "blocks": [
+        { "type": "step", "settings": {
+          "title": "TECHNOLOGIE 3D DRAINANTE",
+          "description": "Les lignes 3D, positionnées sur les cuisses et les fessiers, créent un léger massage qui stimule naturellement la circulation sanguine et aide à activer le drainage de la cellulite."
+        }},
+        { "type": "step", "settings": {
+          "title": "UNE COMPRESSION DOUCE",
+          "description": "La matière épouse parfaitement le corps et exerce une légère pression sur les jambes. Cette compression douce stimule la tonicité et apporte une sensation de maintien agréable tout au long de la journée."
+        }},
+        { "type": "step", "settings": {
+          "title": "EFFET PUSH-UP SCULPTANT",
+          "description": "Une structure gainante qui affine les jambes, accompagnée d'un léger plissé, qui réhausse et galbe naturellement les fesses, pour une silhouette instantanément plus harmonieuse et plus sexy."
+        }}
+      ]
+    }
+  ]
+}
+{% endschema %}
