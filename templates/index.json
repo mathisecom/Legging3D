@@ -156,6 +156,26 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "collapsible_text_QJTUdx": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "SAV Français 7J/7",
+            "content": "<p>Notre service client est à votre écoute <strong>7J/7</strong>.</p><p>Vous pouvez nous contacter en utilisant l'onglet <strong>\"Contact\"</strong> de notre boutique ou par email à l'adresse <strong>crineasav@gmail.com</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_KGzE3M": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Livraisons & Retours",
+            "content": "<p><strong>Livraison : GRATUITE</strong></p><p><strong>Délais : </strong>France et Europe : expédition en 48h, livraison 5 à 7 jours ouvrable</p><p><strong>Retours et échanges : </strong>Retours GRATUITS sous 14 jours Remboursement ou échange selon votre choix</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -168,7 +188,9 @@
         "quantity_selector_BaMNBD",
         "liquid_zV7wPn",
         "liquid_DtxjzL",
-        "buy_buttons_md7N9F"
+        "buy_buttons_md7N9F",
+        "collapsible_text_QJTUdx",
+        "collapsible_text_KGzE3M"
       ],
       "name": "Featured product",
       "settings": {
