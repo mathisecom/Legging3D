@@ -1,0 +1,638 @@
+{%- liquid
+  assign s = section.settings
+  assign uid = section.id
+-%}
+
+{%- style -%}
+  .sb-{{ uid }} {
+    --sb-pad-top: {{ s.padding_top }}px;
+    --sb-pad-bot: {{ s.padding_bottom }}px;
+    --sb-max: {{ s.container_width }}px;
+    --sb-radius: {{ s.border_radius }}px;
+
+    --sb-heading-color: {{ s.heading_color }};
+    --sb-quote-color: {{ s.quote_color }};
+    --sb-emphasis-color: {{ s.emphasis_color }};
+
+    --sb-badge-bg: {{ s.badge_bg }};
+    --sb-badge-text-color: {{ s.badge_text_color }};
+    --sb-star-color: {{ s.star_color }};
+
+    --sb-underline-color: {{ s.underline_color }};
+    --sb-underline-width: {{ s.underline_width }}%;
+    --sb-underline-offset-x: {{ s.underline_offset_x }}%;
+    --sb-underline-offset-y: {{ s.underline_offset_y }}px;
+
+    --sb-grid-color: {{ s.grid_color }};
+    --sb-grid-size: {{ s.grid_size }}px;
+    --sb-grid-opacity: {{ s.grid_opacity | divided_by: 100.0 }};
+
+    --sb-heading-size: {{ s.heading_size }}px;
+    --sb-line2-size: {{ s.line2_size }}px;
+    --sb-quote-size: {{ s.quote_size }}px;
+    --sb-badge-size: {{ s.badge_text_size }}px;
+
+    padding: var(--sb-pad-top) {% if s.full_width %}0{% else %}20px{% endif %} var(--sb-pad-bot);
+    font-family: inherit;
+  }
+
+  .sb-{{ uid }} *,
+  .sb-{{ uid }} *::before,
+  .sb-{{ uid }} *::after { box-sizing: border-box; }
+
+  .sb-{{ uid }}__wrapper {
+    max-width: {% if s.full_width %}100%{% else %}var(--sb-max){% endif %};
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--sb-radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sb-{{ uid }}--reverse .sb-{{ uid }}__wrapper { direction: rtl; }
+  .sb-{{ uid }}--reverse .sb-{{ uid }}__media,
+  .sb-{{ uid }}--reverse .sb-{{ uid }}__content { direction: ltr; }
+
+  /* ===== IMAGE ===== */
+  .sb-{{ uid }}__media {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    background: #0a0c0a;
+  }
+  .sb-{{ uid }}__media img,
+  .sb-{{ uid }}__media svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ===== CONTENT PANEL ===== */
+  .sb-{{ uid }}__content {
+    position: relative;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    {%- case s.bg_type -%}
+    {%- when 'solid' -%}
+    background: {{ s.bg_color_1 }};
+    {%- when 'linear' -%}
+    background: linear-gradient({{ s.gradient_angle }}deg, {{ s.bg_color_1 }} 0%, {{ s.bg_color_2 }} 100%);
+    {%- when 'radial' -%}
+    background: radial-gradient(circle at center, {{ s.bg_color_1 }} 0%, {{ s.bg_color_2 }} 100%);
+    {%- endcase -%}
+  }
+
+  {%- if s.show_grid -%}
+  .sb-{{ uid }}__content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--sb-grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--sb-grid-color) 1px, transparent 1px);
+    background-size: var(--sb-grid-size) var(--sb-grid-size);
+    opacity: var(--sb-grid-opacity);
+    pointer-events: none;
+  }
+  {%- endif -%}
+
+  .sb-{{ uid }}__content > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== BADGE ===== */
+  .sb-{{ uid }}__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    background: var(--sb-badge-bg);
+    color: var(--sb-badge-text-color);
+    border-radius: 999px;
+    font-size: var(--sb-badge-size);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .sb-{{ uid }}__stars {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+  }
+  .sb-{{ uid }}__star {
+    width: calc(var(--sb-badge-size) * 1.15);
+    height: calc(var(--sb-badge-size) * 1.15);
+    fill: var(--sb-star-color);
+    flex-shrink: 0;
+  }
+
+  /* ===== HEADING ===== */
+  .sb-{{ uid }}__heading {
+    color: var(--sb-heading-color);
+    margin: 0;
+    font-weight: 600;
+    font-family: inherit;
+    line-height: 1.05;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .sb-{{ uid }}__heading-line {
+    display: block;
+    position: relative;
+  }
+  .sb-{{ uid }}__heading-line--1 { font-size: var(--sb-heading-size); }
+  .sb-{{ uid }}__heading-line--2 { font-size: var(--sb-line2-size); }
+  .sb-{{ uid }}__heading strong { font-weight: 800; }
+
+  /* ===== UNDERLINE ===== */
+  .sb-{{ uid }}__underline {
+    position: absolute;
+    left: var(--sb-underline-offset-x);
+    bottom: var(--sb-underline-offset-y);
+    width: var(--sb-underline-width);
+    height: 22px;
+    color: var(--sb-underline-color);
+    pointer-events: none;
+  }
+  .sb-{{ uid }}__underline svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+  /* ===== QUOTE ===== */
+  .sb-{{ uid }}__quote {
+    font-style: italic;
+    color: var(--sb-quote-color);
+    font-size: var(--sb-quote-size);
+    line-height: 1.4;
+    margin: 0;
+    font-family: inherit;
+  }
+  .sb-{{ uid }}__quote p { margin: 0 0 0.4em; }
+  .sb-{{ uid }}__quote p:last-child { margin-bottom: 0; }
+  .sb-{{ uid }}__quote strong,
+  .sb-{{ uid }}__quote b {
+    color: var(--sb-emphasis-color);
+    font-weight: 700;
+  }
+
+  /* ===== TABLET ===== */
+  @media (min-width: 750px) and (max-width: 989px) {
+    .sb-{{ uid }}__content {
+      padding: 40px 32px;
+      gap: 22px;
+    }
+    .sb-{{ uid }}__heading-line--1 { font-size: calc(var(--sb-heading-size) * 0.7); }
+    .sb-{{ uid }}__heading-line--2 { font-size: calc(var(--sb-line2-size) * 0.7); }
+    .sb-{{ uid }}__underline { height: 18px; }
+    .sb-{{ uid }}__quote { font-size: calc(var(--sb-quote-size) * 0.9); }
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 749px) {
+    .sb-{{ uid }} {
+      padding: calc(var(--sb-pad-top) * 0.5) {% if s.full_width %}0{% else %}12px{% endif %} calc(var(--sb-pad-bot) * 0.5);
+    }
+    .sb-{{ uid }}__wrapper,
+    .sb-{{ uid }}--reverse .sb-{{ uid }}__wrapper {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+    .sb-{{ uid }}__media {
+      aspect-ratio: 16/11;
+      min-height: 0;
+    }
+    .sb-{{ uid }}__content {
+      padding: 32px 22px;
+      gap: 18px;
+    }
+    .sb-{{ uid }}__heading { gap: 3px; }
+    .sb-{{ uid }}__heading-line--1 { font-size: calc(var(--sb-heading-size) * 0.55); }
+    .sb-{{ uid }}__heading-line--2 { font-size: calc(var(--sb-line2-size) * 0.55); }
+    .sb-{{ uid }}__quote { font-size: calc(var(--sb-quote-size) * 0.85); }
+    .sb-{{ uid }}__badge {
+      font-size: calc(var(--sb-badge-size) * 0.9);
+      padding: 6px 14px;
+    }
+    .sb-{{ uid }}__star {
+      width: calc(var(--sb-badge-size) * 1.05);
+      height: calc(var(--sb-badge-size) * 1.05);
+    }
+    .sb-{{ uid }}__underline { height: 14px; }
+  }
+{%- endstyle -%}
+
+<div class="sb-{{ uid }}{% if s.image_position == 'right' %} sb-{{ uid }}--reverse{% endif %}">
+  <div class="sb-{{ uid }}__wrapper">
+
+    {%- comment -%} ===== IMAGE ===== {%- endcomment -%}
+    <div class="sb-{{ uid }}__media">
+      {%- if s.image != blank -%}
+        {{ s.image | image_url: width: 1500 | image_tag:
+            loading: 'lazy',
+            sizes: '(max-width: 749px) 100vw, 50vw',
+            widths: '375, 550, 750, 1100, 1500, 2000',
+            alt: s.image.alt | default: s.heading_line_1
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} ===== CONTENT ===== {%- endcomment -%}
+    <div class="sb-{{ uid }}__content">
+
+      {%- if s.show_badge -%}
+        <div class="sb-{{ uid }}__badge">
+          {%- if s.show_stars and s.star_count > 0 -%}
+            <span class="sb-{{ uid }}__stars" aria-label="{{ s.star_count }} étoiles">
+              {%- for i in (1..s.star_count) -%}
+                <svg class="sb-{{ uid }}__star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 2l2.9 6.9L22 9.6l-5.5 4.7L18.2 22 12 18.2 5.8 22l1.7-7.7L2 9.6l7.1-.7L12 2z"/>
+                </svg>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+          {%- if s.badge_text != blank -%}
+            <span>{{ s.badge_text }}</span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if s.heading_line_1 != blank or s.heading_line_2 != blank -%}
+        <h2 class="sb-{{ uid }}__heading">
+          {%- if s.heading_line_1 != blank -%}
+            <span class="sb-{{ uid }}__heading-line sb-{{ uid }}__heading-line--1">{{ s.heading_line_1 }}</span>
+          {%- endif -%}
+          {%- if s.heading_line_2 != blank -%}
+            <span class="sb-{{ uid }}__heading-line sb-{{ uid }}__heading-line--2">
+              {{ s.heading_line_2 }}
+              {%- if s.show_underline -%}
+                <span class="sb-{{ uid }}__underline" aria-hidden="true">
+                  <svg viewBox="0 0 300 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path d="M5 16 C 60 4, 130 24, 200 12 S 280 6, 296 16" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        </h2>
+      {%- endif -%}
+
+      {%- if s.quote != blank -%}
+        <div class="sb-{{ uid }}__quote">{{ s.quote }}</div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bannière image + texte",
+  "tag": "section",
+  "class": "section-split-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Pleine largeur (bord à bord)",
+      "info": "Lorsqu'activé, la section occupe toute la largeur de l'écran.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Position de l'image",
+      "options": [
+        { "value": "left",  "label": "Gauche" },
+        { "value": "right", "label": "Droite" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Largeur maximale (si pleine largeur désactivée)",
+      "min": 800,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1300
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Arrondi des coins",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacement haut",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacement bas",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image principale"
+    },
+
+    {
+      "type": "header",
+      "content": "Arrière-plan (côté texte)"
+    },
+    {
+      "type": "select",
+      "id": "bg_type",
+      "label": "Type d'arrière-plan",
+      "options": [
+        { "value": "solid",  "label": "Couleur unie" },
+        { "value": "linear", "label": "Dégradé linéaire" },
+        { "value": "radial", "label": "Dégradé radial" }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_1",
+      "label": "Couleur 1",
+      "default": "#1c1f1c"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_2",
+      "label": "Couleur 2 (dégradés uniquement)",
+      "default": "#0a0c0a"
+    },
+    {
+      "type": "range",
+      "id": "gradient_angle",
+      "label": "Angle du dégradé linéaire",
+      "min": 0,
+      "max": 360,
+      "step": 5,
+      "unit": "°",
+      "default": 135
+    },
+    {
+      "type": "checkbox",
+      "id": "show_grid",
+      "label": "Afficher la grille décorative",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "grid_color",
+      "label": "Couleur des lignes",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "grid_size",
+      "label": "Taille des cases",
+      "min": 10,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "grid_opacity",
+      "label": "Opacité de la grille",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 6
+    },
+
+    {
+      "type": "header",
+      "content": "Badge (étoiles + texte)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badge",
+      "label": "Afficher le badge",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Afficher les étoiles",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "star_count",
+      "label": "Nombre d'étoiles",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Couleur des étoiles",
+      "default": "#00C853"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Texte du badge",
+      "default": "Over 60,000 Satisfied Customers"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Fond du badge",
+      "default": "#2a2d2a"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Couleur du texte du badge",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_text_size",
+      "label": "Taille du texte du badge",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+
+    {
+      "type": "header",
+      "content": "Titre principal"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading_line_1",
+      "label": "Ligne 1 (gras supporté)",
+      "default": "Collect Reviews &"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Taille ligne 1",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 58
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading_line_2",
+      "label": "Ligne 2 (mettez \"#1\" en gras pour la mise en valeur)",
+      "default": "Rank <strong>#1</strong> on Google"
+    },
+    {
+      "type": "range",
+      "id": "line2_size",
+      "label": "Taille ligne 2",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 58
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Couleur du titre",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Trait décoratif sous la ligne 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_underline",
+      "label": "Afficher le trait",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Couleur du trait",
+      "default": "#FACC15"
+    },
+    {
+      "type": "range",
+      "id": "underline_width",
+      "label": "Largeur",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 75
+    },
+    {
+      "type": "range",
+      "id": "underline_offset_x",
+      "label": "Décalage horizontal",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "underline_offset_y",
+      "label": "Décalage vertical (négatif = vers le haut)",
+      "min": -40,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": -8
+    },
+
+    {
+      "type": "header",
+      "content": "Citation"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "Texte de la citation",
+      "default": "<p>\"The <strong>Best way</strong> to get positive Google reviews from your customers\"</p>"
+    },
+    {
+      "type": "range",
+      "id": "quote_size",
+      "label": "Taille",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Couleur du texte",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "emphasis_color",
+      "label": "Couleur du texte en gras",
+      "default": "#FACC15"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bannière image + texte",
+      "category": "Bannières"
+    }
+  ]
+}
+{% endschema %}
