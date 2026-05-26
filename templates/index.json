@@ -221,37 +221,37 @@
         "collapsible_text_QJTUdx": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-chat",
             "icon_width": 20,
             "title": "SAV Français 7J/7",
             "content": "<p>Notre service client est à votre écoute <strong>7J/7</strong>.</p><p>Vous pouvez nous contacter en utilisant l'onglet <strong>\"Contact\"</strong> de notre boutique ou par email à l'adresse <strong>crineasav@gmail.com</strong></p>",
             "page": ""
           }
         },
-        "collapsible_text_KGzE3M": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Matériaux et Instructions D'Entretien",
-            "content": "<p><strong>Livraison : GRATUITE</strong></p><p><strong>Délais : </strong>France et Europe : expédition en 48h, livraison 5 à 7 jours ouvrable</p><p><strong>Retours et échanges : </strong>Retours GRATUITS sous 14 jours Remboursement ou échange selon votre choix</p>",
-            "page": ""
-          }
-        },
         "collapsible_text_Pa9rm9": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-box",
             "icon_width": 20,
             "title": "Livraisons & Retours",
             "content": "<p><strong>Composition</strong>: 90 % polyamide, 10 % élasthanne<br/><br/>– Laver à une température inférieure à 40 °C<br/>- Ne pas javelliser<br/>- Ne pas repasser<br/>- Ne pas nettoyer à sec</p>",
             "page": ""
           }
         },
+        "collapsible_text_KGzE3M": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "picto-leaf",
+            "icon_width": 20,
+            "title": "Matériaux et Instructions D'Entretien",
+            "content": "<p><strong>Livraison : GRATUITE</strong></p><p><strong>Délais : </strong>France et Europe : expédition en 48h, livraison 5 à 7 jours ouvrable</p><p><strong>Retours et échanges : </strong>Retours GRATUITS sous 14 jours Remboursement ou échange selon votre choix</p>",
+            "page": ""
+          }
+        },
         "collapsible_text_NpJ9rb": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-earth",
             "icon_width": 20,
             "title": "Première Technologie 3D Brevetée",
             "content": "<p>Nous avons développé une technologie exclusive de <strong>compression 3D</strong> qui sculpte votre silhouette, lisse votre <strong>peau et soutient les processus naturels</strong> de votre corps, sans effort. Protégée par un brevet exclusif, cette innovation est <strong>uniquement disponible via Crinéa.</strong></p>",
@@ -274,8 +274,8 @@
         "buy_buttons_md7N9F",
         "liquid_qT6g6C",
         "collapsible_text_QJTUdx",
-        "collapsible_text_KGzE3M",
         "collapsible_text_Pa9rm9",
+        "collapsible_text_KGzE3M",
         "collapsible_text_NpJ9rb"
       ],
       "name": "Featured product",
