@@ -706,29 +706,37 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "Comment la compression m'aide-t-elle à perdre du poids ? ",
+            "content": "<p>La compression de nos leggings crée une <strong>résistance pour vos muscles, </strong>obligeant vos jambes à travailler 2 à 3 fois plus dur qu'en l'absence des leggings.</p><p>Lorsque vos muscles travaillent plus dur, ils <strong>brûlent plus de calories </strong>pour produire de l'énergie, ce qui vous aide à <strong>perdre du poids 2 fois plus vite.</strong></p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Comment choisir la bonne taille ?",
+            "content": "<p>Nos leggings <strong>taillent normalement</strong>. Nous vous conseillons de prendre <strong>votre taille habituelle de pantalon</strong>.<br/>Si vous hésitez entre deux tailles, choisissez <strong>la taille du dessus</strong> pour plus de confort.</p><p>Un <strong>guide des tailles</strong> est disponible directement sur la page pour vous aider.<br/>Et en cas de doute, notre service client peut vous conseiller, et <strong>un échange est possible</strong> si la taille ne convient pas.</p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Comment les lignes sculptantes m'aident-elles à réduire la cellulite ?",
+            "content": "<p>Nos<strong> lignes sculptantes  </strong>sont placées <strong>stratégiquement</strong> pour comprimer vos cuisses et vos fesses, <strong>augmentant la circulation sanguine de 30 %.</strong></p><p>Une meilleure circulation permet à votre corps <strong>d’éliminer plus efficacement les cellules graisseuses</strong> et les toxines responsables de la cellulite, en <strong>traitant la cause principale.</strong></p><p>Combinées à notre compression, elles permettent également d’entraîner vos jambes, ce qui vous donne des <strong>jambes fermes et toniques.</strong></p>"
+          }
+        },
+        "item_JWewtq": {
+          "type": "item",
+          "settings": {
+            "title": "Les leggings Legz sont-ils opaques ?",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
           }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_JWewtq"
       ],
       "settings": {
         "full_width": false,
