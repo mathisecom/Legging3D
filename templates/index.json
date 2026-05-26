@@ -9,6 +9,48 @@
  */
 {
   "sections": {
+    "splitbanner_fbcfpX": {
+      "type": "splitbanner",
+      "name": "Bannière image + texte",
+      "settings": {
+        "full_width": true,
+        "image_position": "left",
+        "container_width": 1300,
+        "border_radius": 0,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_type": "solid",
+        "bg_color_1": "#fcf8f5",
+        "bg_color_2": "#fcf8f5",
+        "gradient_angle": 135,
+        "show_grid": false,
+        "grid_color": "#ffffff",
+        "grid_size": 50,
+        "grid_opacity": 6,
+        "show_badge": true,
+        "show_stars": true,
+        "star_count": 5,
+        "star_color": "#00C853",
+        "badge_text": "+3,000 Clientes Satisfaites",
+        "badge_bg": "#efe7e2",
+        "badge_text_color": "#1a1a1a",
+        "badge_text_size": 14,
+        "heading_line_1": "Réduisez la cellulite,",
+        "heading_size": 58,
+        "heading_line_2": "brûlez des calories, sans effort",
+        "line2_size": 40,
+        "heading_color": "#1a1a1a",
+        "show_underline": false,
+        "underline_color": "#FACC15",
+        "underline_width": 75,
+        "underline_offset_x": 5,
+        "underline_offset_y": -8,
+        "quote": "<p>Les seuls <strong>leggings brevetés</strong> à micro-massage 3D, testés cliniquement pour stimuler la circulation et lisser visiblement la peau en 30 jours.</p>",
+        "quote_size": 16,
+        "quote_color": "#1a1a1a",
+        "emphasis_color": "#772647"
+      }
+    },
     "logoscroll_TMHbfX": {
       "type": "logoscroll",
       "blocks": {
@@ -432,7 +474,7 @@
         "scrolling_speed": 10,
         "background": "",
         "background_gradient": "",
-        "text_color": "#772647ff",
+        "text_color": "#772647",
         "text_gradient": ""
       }
     },
@@ -785,6 +827,7 @@
     }
   },
   "order": [
+    "splitbanner_fbcfpX",
     "logoscroll_TMHbfX",
     "featured_product_JiXBgg",
     "featured_collection_AKVKUy",
